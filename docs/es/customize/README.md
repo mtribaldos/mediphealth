@@ -47,8 +47,8 @@ Parámetro  | Valor
 ---------- | -------
 `main/UiBaseUrl` | `http://mypartner.com/file`
 
-y se crea un fichero gestionado por el servidor web que sea accesible en la URL `http://mypartner.com/files/menu/Menu.qml` con el contenido:
-[here](myLib/README.md)
+y se crea un fichero gestionado por el servidor web que sea accesible en la URL `http://mypartner.com/files/menu/Menu.qml` con el siguiente contenido:
+ * [Menu.qml](partner/Menu.qml)
 ```
     
 
