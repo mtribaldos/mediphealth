@@ -1,5 +1,5 @@
 
-## Personalización de propia interfaz de usuario ##
+## Personalización de propia interfaz de usuario
 
 La URL de base del interfaz de usuario (ui_base_url) se configura a través del parámetro de configuración `main/UiBaseUrl` en Backoffice.
 
@@ -32,8 +32,12 @@ La estructura de directorios tiene la siguiente forma:
 
 La variable `interface_name` se corresponde con el parámetro de configuración `main/InterfaceName` en Backoffice. El fichero de interfaz de usuario usado es el primero que coincide con las rutas posibles de búsqueda. Por orden de preferencia, estas son:
 
-1. `<ui_base_url>/<interface_name>/<ApplicationName>.qml`
-2. `<ui_base_url>/<ApplicationName>.qml`
+1. `<ui_base_url>/<application_name>/<interface_name>/<ApplicationName>.qml`
+2. `<ui_base_url>/<application_name>/<ApplicationName>.qml`
+3. `qrc://applications/<application_name>/<interface_name>/<ApplicationName>.qml`
+4. `qrc://applications/<application_name>/<ApplicationName>.qml`
+
+Las rutas de búsqueda 3 y 4 son internas, con lo que en ese caso no se aplicaría ninguna customización y se aplicaría como interfaz de usuario de esa aplicación el que provea Mediphealth.
 
 El criterio es idéntico para el caso del órden de búsqueda de un widget.
 
@@ -41,7 +45,7 @@ A continuación se presentan una serie de ejemplos, en orden creciente de comple
 
 ### Ejemplo 1
 
-Desde la aplicación de Backoffice la siguiente configuración de parámetros:
+Desde la aplicación de Backoffice se escribe la siguiente configuración de parámetros:
 
 Parámetro  | Valor
 ---------- | -------
